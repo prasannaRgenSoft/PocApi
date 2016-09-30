@@ -60,7 +60,7 @@ namespace TestCoreWebApi
 
          services.ConfigureCors(options => options.AddPolicy("AllowAll", p => p.AllowAnyOrigin()
                                                                         .AllowAnyMethod()
-                                                                         .AllowAnyHeader().AllowAnyHeader().AllowCredentials());
+                                                                         .AllowAnyHeader());
 
             services.AddMvc(options=> 
             {
