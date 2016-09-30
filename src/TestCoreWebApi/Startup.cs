@@ -41,7 +41,7 @@ namespace TestCoreWebApi
         // This method gets called by the runtime. Use this method to add services to the container
         public void ConfigureServices(IServiceCollection services)
         {
-             services.AddCors();
+             //services.AddCors();
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
 
@@ -52,15 +52,15 @@ namespace TestCoreWebApi
             services.AddDbContext<Employee>(options => options.UseSqlServer(connection));
 
 
-          //  var corsBuilder = new CorsPolicyBuilder();
-          //  corsBuilder.AllowAnyHeader();
-          //  corsBuilder.AllowAnyMethod();
-          //  corsBuilder.AllowAnyOrigin();
-          //  corsBuilder.AllowCredentials();
+            var corsBuilder = new CorsPolicyBuilder();
+            corsBuilder.AllowAnyHeader();
+            corsBuilder.AllowAnyMethod();
+            corsBuilder.AllowAnyOrigin();
+            corsBuilder.AllowCredentials();
 
-         services.ConfigureCors(options => options.AddPolicy("AllowAll", p => p.AllowAnyOrigin()
-                                                                        .AllowAnyMethod()
-                                                                         .AllowAnyHeader()));
+         //services.ConfigureCors(options => options.AddPolicy("AllowAll", p => p.AllowAnyOrigin()
+         //                                                              .AllowAnyMethod()
+         //                                                                .AllowAnyHeader()));
 
             services.AddMvc(options=> 
             {
