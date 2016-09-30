@@ -14,6 +14,7 @@ using Microsoft.AspNet.Cors;
 namespace TestCoreWebApi.Controllers
 {
     [Route("api/[controller]")]
+    [EnableCors("*")]
     public class TestController : Controller
     {
         private Employee _context;
