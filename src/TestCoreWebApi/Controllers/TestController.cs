@@ -63,6 +63,14 @@ namespace TestCoreWebApi.Controllers
             return Json(employees1);
         }
 
+        [HttpGet, Route("GetdataAs")]
+        public async Task<IActionResult> GetDataAs()
+        {
+            int id = 0;
+            List<EmployeeModel> employees1 = await _context.empset.FromSql("exec dbo.empdal @Mode={0}", id).ToListAsync();
+            return Json(employees1);
+        }
+        
         [HttpPost, Route("Insert")]
         public IActionResult Insert([FromBody] EmployeeModel emps)
         {
