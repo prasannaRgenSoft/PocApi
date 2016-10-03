@@ -85,10 +85,13 @@ namespace TestCoreWebApi
 
             app.UseApplicationInsightsExceptionTelemetry();
 
-            
+              Microsoft.AspNet.Cors.Infrastructure.CorsOptions i = new netcors.Infrastructure.CorsOptions();
+            i.AddPolicy("AllowAll", p => p.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            var defName = i.DefaultPolicyName;
+            app.UseCors(defName);
 
             app.UseMvcWithDefaultRoute();
-            app.UseCors("AllowAll");
+            
         }
     }
 }
