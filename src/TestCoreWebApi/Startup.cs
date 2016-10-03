@@ -12,6 +12,7 @@ using TestCoreWebApi.Model;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.Net.Http.Headers;
+using netcors =  Microsoft.AspNet.Cors;
 
 namespace TestCoreWebApi
 {
