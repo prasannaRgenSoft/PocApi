@@ -25,7 +25,8 @@
       "Microsoft.Framework.CodeGenerators.Mvc": "1.0.0-beta4"
     },
     "Swashbuckle": "6.0.0-beta902",
-    "System.Data.SqlClient": "4.1.0"
+    "System.Data.SqlClient": "4.1.0",
+     "WebApiContrib.Core.Formatter.Jsonp": "1.0.0"
   },
 
   "commands": {
