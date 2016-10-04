@@ -13,6 +13,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.Net.Http.Headers;
 using netcors =  Microsoft.AspNet.Cors;
+using WebApiContrib.Core.Formatter.Jsonp;
 
 namespace TestCoreWebApi
 {
@@ -68,6 +69,7 @@ namespace TestCoreWebApi
                 options.FormatterMappings.SetMediaTypeMappingForFormat("json", new MediaTypeHeaderValue("application/json"));
                 options.FormatterMappings.SetMediaTypeMappingForFormat("xml", new MediaTypeHeaderValue("application/xml"));
                 options.FormatterMappings.SetMediaTypeMappingForFormat("txt", new MediaTypeHeaderValue("text/plain"));
+                options.FormatterMappings.SetMediaTypeMappingForFormat("jsonp", new MediaTypeHeaderValue("application/json"));
             });
         }
 
