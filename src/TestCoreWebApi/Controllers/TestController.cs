@@ -14,7 +14,8 @@ using Microsoft.AspNet.Cors;
 namespace TestCoreWebApi.Controllers
 {
     [Route("api/[controller]")]
-    [EnableCors("AllowAll")]
+    //[EnableCors("AllowAll")]
+    [EnableCors("http://frontend-prasanna-core.cloudapps.click2cloud.org")]
     public class TestController : Controller
     {
         private Employee _context;
