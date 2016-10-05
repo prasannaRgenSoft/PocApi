@@ -88,11 +88,11 @@ namespace TestCoreWebApi
 
             app.UseApplicationInsightsExceptionTelemetry();
 
-              Microsoft.AspNet.Cors.Infrastructure.CorsOptions i = new netcors.Infrastructure.CorsOptions();
-            i.AddPolicy("AllowAll", p => p.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
-            var defName = i.DefaultPolicyName;
-            app.UseCors(defName);
-
+           //   Microsoft.AspNet.Cors.Infrastructure.CorsOptions i = new netcors.Infrastructure.CorsOptions();
+           // i.AddPolicy("AllowAll", p => p.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+           // var defName = i.DefaultPolicyName;
+           // app.UseCors(defName);
+            app.UseCors(options => options.WithOrigins("http://frontend-prasanna-core.cloudapps.click2cloud.org"));
             app.UseMvcWithDefaultRoute();
             
         }
