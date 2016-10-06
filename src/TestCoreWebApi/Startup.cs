@@ -92,7 +92,7 @@ namespace TestCoreWebApi
            // i.AddPolicy("AllowAll", p => p.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
            // var defName = i.DefaultPolicyName;
            // app.UseCors(defName);
-            app.UseCors(options => options.WithOrigins("http://frontend-prasanna-core.cloudapps.click2cloud.org"));
+            app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseMvcWithDefaultRoute();
             
         }
